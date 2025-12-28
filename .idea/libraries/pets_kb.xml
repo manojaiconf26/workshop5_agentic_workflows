@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pets-kb">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/pets-kb.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,60 @@
+default_agent: strands_claude_remote
+agents:
+  strands_claude_remote:
+    name: strands_claude_remote
+    entrypoint: C:/Users/User1/Downloads/AI For Bharat/workshop5/agentic-ai-with-mcp-and-strands/agentcore/strands_claude_remote.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: C:\Users\User1\Downloads\AI For Bharat\workshop5\agentic-ai-with-mcp-and-strands\agentcore
+    aws:
+      execution_role: arn:aws:iam::891377318455:role/agentcore-strands_claude-role
+      execution_role_auto_create: true
+      account: '891377318455'
+      region: us-west-2
+      ecr_repository: 891377318455.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-strands_claude_remote
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: strands_claude_remote-hZ2pJa58X5
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:891377318455:runtime/strands_claude_remote-hZ2pJa58X5
+      agent_session_id: 01ca83e9-5849-41f8-9ae3-ae83fc7234e6
+    codebuild:
+      project_name: bedrock-agentcore-strands_claude_remote-builder
+      execution_role: arn:aws:iam::891377318455:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-bafcc72407
+      source_bucket: bedrock-agentcore-codebuild-sources-891377318455-us-west-2
+    memory:
+      mode: NO_MEMORY
+      memory_id: null
+      memory_arn: null
+      memory_name: null
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false

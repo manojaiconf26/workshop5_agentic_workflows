@@ -1,0 +1,64 @@
+default_agent: strands_agent_inbound_identity
+agents:
+  strands_agent_inbound_identity:
+    name: strands_agent_inbound_identity
+    entrypoint: C:/Users/User1/Downloads/AI For Bharat/workshop5/agentic-ai-with-mcp-and-strands/agentcore/identity/strands_claude.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: null
+    aws:
+      execution_role: arn:aws:iam::891377318455:role/AmazonBedrockAgentCoreSDKRuntime-us-west-2-2213d1079e
+      execution_role_auto_create: false
+      account: '891377318455'
+      region: us-west-2
+      ecr_repository: 891377318455.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-strands_agent_inbound_identity
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: strands_agent_inbound_identity-gVBrm9HLm0
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:891377318455:runtime/strands_agent_inbound_identity-gVBrm9HLm0
+      agent_session_id: 5c6a4eb5-0f3b-49ed-b97e-5604db49eb37
+    codebuild:
+      project_name: bedrock-agentcore-strands_agent_inbound_identity-builder
+      execution_role: arn:aws:iam::891377318455:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-2213d1079e
+      source_bucket: bedrock-agentcore-codebuild-sources-891377318455-us-west-2
+    memory:
+      mode: NO_MEMORY
+      memory_id: null
+      memory_arn: null
+      memory_name: null
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration:
+      customJWTAuthorizer:
+        discoveryUrl: https://cognito-idp.us-west-2.amazonaws.com/us-west-2_2CfIRk2J7/.well-known/openid-configuration
+        allowedClients:
+        - 3glth8s8o37i4egqfk5mgjqfuf
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
