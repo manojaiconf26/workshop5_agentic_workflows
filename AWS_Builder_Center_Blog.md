@@ -603,7 +603,7 @@ agentic-ai-with-mcp-and-strands/
 **Quick Start:**
 ```bash
 # Clone repository
-git clone https://github.com/aws-samples/agentic-ai-with-mcp-and-strands.git
+git clone https://github.com/aws-samples/agentic-ai-with-mcp-and-strands.git or https://github.com/manojaiconf26/workshop5_agentic_workflows
 cd agentic-ai-with-mcp-and-strands
 ```
 <i>Follow the README.md for the detailed instructions.</i>
